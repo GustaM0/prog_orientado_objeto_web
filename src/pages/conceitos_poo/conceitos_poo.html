@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="primary-header">
+        <div class="wrapper">
+            <div class="primary-header__inner">
+            <span class="logo">
+                <img src="../../assets/c-sharp-c.svg" alt="Logo" class="navbar-logo">
+            </span>
+            <ul class="nav-list">
+                <li><a href="#">Início</a></li>
+                <li><a id="open-modal-topic">Tópicos</a></li>
+                <li><a href="#">Curiosidades</a></li>
+                <li><a id="open-modal-group">Grupo</a></li>
+            </ul>
+            </div>
+        </div>
+        </header>
+    <main>
+        <div class="wrapper">
+            <!-- <h2 id="page-title">Programação Orientada a Objetos</h2> -->
+            <h2 id="b_01">Conceitos de programação Orientada a Objetos</h2>
+            <div class="content-container">
+                <h3>1. Visão de Alan Kay</h3>
+                <img src="./assets/Imagem11.png" alt="">
+                <p>Alan Kay começou a desenvolver a Programação Orientada a Objetos nos anos 1960, influenciado pelo Sketchpad, Simula, 
+                    ARPANET e sua formação em biologia. Para ele, a POO se baseava em três pilares: troca de mensagens (messaging), retenção 
+                    local e ocultação de estado (local retention and protection), e ligação tardia extrema (extreme late-binding). Essas 
+                    ideias definiam a POO como uma filosofia de comunicação e modularidade, diferenciando-se das abordagens centradas em dados.</p>
+            </div>
+            <h2 id="b_02"></h2>
+            <div class="content-container">
+                <h3>1.1. Troca de Mensagens</h3>
+                <img src="./assets/Imagem12.png" alt="">
+                <ul>
+                    <li><p><strong>Objetos como "células" que trocam mensagens: </strong>Kay comparava objetos a células biológicas, 
+                        que se comunicam enviando e recebendo sinais. Essa comunicação ocorre por meio de trocas de mensagens, 
+                        em vez de acesso direto aos dados.</p></li>
+                    <li><p><strong>Encapsulamento e eliminação de acesso direto a dados: </strong>Para Kay, o foco era substituir a 
+                        manipulação direta de dados pela comunicação através de mensagens, o que promove a ocultação de informações e reforça 
+                        a independência dos objetos. Isso assegura que cada objeto gerencie seu próprio estado sem interferência externa.</p></li>
+                    <li><p><strong>Programadores não são "Máquinas de Turing": </strong>Ele argumentava que a POO deveria se afastar do modelo 
+                        tradicional de manipulação de dados e se aproximar de uma comunicação mais natural e orgânica, semelhante a sistemas biológicos ou 
+                        distribuídos.</p></li>
+                </ul>
+            </div>
+            <h2 id="b_03"></h2>
+            <div class="content-container">
+                <h3>1.2. Retenção local e ocultação de estado</h3>
+                <img src="./assets/Imagem13.png" alt="">
+                <ul>
+                    <li><p><strong>Encapsulamento como princípio fundamental: </strong></p>Na visão de Kay, o encapsulamento era central 
+                        para a POO, limitando o acesso ao estado interno do objeto. Isso permitia que os objetos controlassem suas próprias 
+                        modificações, reforçando a ideia de retenção local, onde cada objeto mantém seu estado de forma segura.</li>
+                    <li><p><strong>Objetos como entidades independentes que gerenciam seu próprio estado: </strong>O acesso direto ao 
+                        estado de um objeto era evitado, promovendo uma abordagem em que a manipulação de dados ocorria exclusivamente através 
+                        de mensagens, permitindo que os objetos fossem "agentes ativos" que respondem a estímulos.</p></li>
+                    <li><p><strong>Substituição de dados acessíveis por comportamentos encapsulados: </strong></p>Em vez de ver os objetos 
+                        apenas como recipientes de dados com métodos para manipulação, Kay via os objetos como possuidores de comportamentos 
+                        internos que respondiam dinamicamente às mensagens recebidas.</li>
+                </ul>
+            </div>
+            <h2 id="b_04"></h2>
+            <div class="content-container">
+                <h3>1.3. Ligação tardia</h3>
+                <ul>
+                    <li><p><strong>Dinamismo e ligação tardia extrema: </strong></p>Para Kay, a ligação tardia permitia adiar a decisão sobre qual método 
+                        seria chamado até o momento da execução. Isso possibilita que diferentes objetos respondessem à mesma mensagem de maneiras diversas, 
+                        dependendo do contexto.</li>
+                    <li><p><strong>Polimorfismo como extensão natural da ligação tardia: </strong></p>O polimorfismo, na visão de Kay, envolvia a capacidade 
+                        dos objetos de responder de forma flexível a mensagens semelhantes. Isso ia além da sobrescrita de métodos em subclasses, permitindo 
+                        comportamentos dinâmicos que se ajustavam ao contexto.</li>
+                    <li><p><strong>Composição em vez de herança rígida: </strong></p>Ele via a herança estrita como uma limitação e preferia sistemas onde 
+                        os objetos pudessem evoluir e modificar seu comportamento de forma fluida. A composição e a comunicação entre objetos eram mais importantes
+                        do que uma hierarquia fixa.</li>
+                </ul>
+            </div>
+            <h2 id="b_05"></h2>
+            <div class="content-container">
+                <h3>1.4. NON-DATA POO vs Tipos abstratos de dados</h3>
+                <p>A visão de Alan Kay sobre POO era centrada na eliminação de dados acessíveis e na comunicação por mensagens, com os objetos agindo como 
+                    "agentes ativos" que gerenciam seu próprio estado e interagem dinamicamente. Para ele, a POO não deveria focar em dados, mas sim no 
+                    comportamento e na flexibilidade de objetos que respondem a estímulos. No entanto, a comunidade de computação seguiu um caminho diferente, 
+                    adotando a POO como uma forma de encapsular dados e expor operações por meio de interfaces, seguindo a abordagem dos Abstract Data Types (ADTs).</p>
+            </div>
+            <h2 id="b_06"></h2>
+            <div class="content-container">
+                <h3>2. Robert Sebesta sobre POO: o que uma linguagem deve ter para suportar orientação a objetos?</h3>
+                <p>Para que uma linguagem de programação suporte orientação a objetos (POO), ela precisa fornecer suporte a 
+                    três elementos-chave: tipos de dados abstratos, herança e vinculação dinâmica de chamadas a métodos.</p>
+                <h3>2.1. Tipos abstratos de dados</h3>
+                <p>A abstração é a capacidade de representar algo apenas com seus atributos e comportamentos mais relevantes, removendo 
+                    detalhes desnecessários. Ela é fundamental para combater a complexidade dos sistemas, pois permite focar nos aspectos essenciais.</p>
+
+                <p>Existem dois tipos principais de abstração:</p>
+
+                <ul>
+                    <li><p>Abstração de processos: Utiliza subprogramas para representar ações específicas, como <code>sortInt(list, listLen)</code>.</p></li>
+                    <li><p>Abstração de dados: Representa um dado com seus atributos essenciais, sem se preocupar com os detalhes de implementação, 
+                        por exemplo, tratar um dado <code>Pessoa</code> apenas com as informações mais significativas.</p></li>
+                </ul>
+
+                <p>Um tipo abstrato de dado (TAD) é um exemplo de abstração de dados e deve satisfazer duas condições:</p>
+
+                <p><strong>1. </strong>O programa que usa o TAD não precisa conhecer sua implementação interna, apenas as operações disponíveis, promovendo 
+                    encapsulamento e ocultação de informações.</p>
+                <p><strong>2. </strong>A implementação do tipo e seus protocolos de operação devem estar contidos em uma única unidade sintática.</p>
+                <p>Um exemplo classico de tipo abstrato de dados é uma pilha:</p>
+                <img src="./assets/Imagem14.png" alt="">
+            </div>
+            <h2 id="b_07"></h2>
+            <div class="content-container">
+                <h3>2.1.2. Questões de projeto sobre os TADS</h3>
+                <p>Atualmente, C# é uma das linguagens de programação mais populares do mundo, usada em uma 
+                    ampla variedade de aplicações, desde sistemas corporativos até jogos (com Unity), 
+                    desenvolvimento de aplicativos móveis (Xamarin), e aplicações web (ASP.NET Core). A linguagem 
+                    continua a evoluir, mantendo-se moderna e adotando novas funcionalidades para facilitar 
+                    o desenvolvimento e melhorar a performance.</p>
+                <div class="reference-content">
+                    <p>Referência: : Stack Overflow Developer Survey e TIOBE Index <a target="_blank" href="https://survey.stackoverflow.co">https://survey.stackoverflow.co</a></p>
+                </div>
+            </div>
+            <div class="content-container">
+                <p>"O SRP diz que uma classe deve ter apenas uma razão para mudar, ou seja,
+                    ela deve ter apenas uma responsabilidade."
+                    <strong>Antes de aplicar o SRP:</strong></p>
+                <iframe src="https://www.onlinegdb.com/3bvT8x7Dd" 
+                    width="100%" 
+                    height="600px" 
+                    style="border: 1px solid #ccc; border-radius: 10px;">
+                </iframe>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </main>
+        <!-- Modal de Tópicos -->
+        <div id="modal-topic" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal-topic">&times;</span>
+                <h2>Tópicos</h2>
+                <p class="bloco-modal" data-section="sts_historia">História do C#</p>
+                <p class="bloco-modal" data-section="sts_contexto">Contexto e Motivação</p>
+                <p class="bloco-modal" data-section="sts_lancamento">Lançamento e Primeira Versão</p>
+                <p class="bloco-modal" data-section="sts_evolucao">Evolução e Novas Funcionalidades</p>
+                <p class="bloco-modal" data-section="sts_plataforma">C# e a Plataforma .NET</p>
+                <p class="bloco-modal" data-section="sts_hoje">C# Hoje</p>
+            </div>
+        </div>
+
+    <!-- Modal de Grupo -->
+    <div id="modal-group" class="modal" id="open-pages-nav">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal-group">&times;</span> 
+            <h2>Nosso Grupo</h2>
+            <p>Este é o conteúdo do modal.</p>
+        </div>
+    </div>
+    <!-- Botao flutuante -->
+    <div class="floating-button" id="open-pages-nav-btn">
+        <span class="icon-sandwich">&#9776;</span>
+    </div>
+
+    <!-- Modal de Navegação de Páginas -->
+    <div id="pages-nav" class="pages-nav-modal">
+        <div class="pages-nav-modal-content">
+            <span class="close-btn" id="close-pages-nav">&times;</span>
+            <h2>Ver um tema</h2>
+            <div class="blocks-container">
+                <a href="../historia_poo/historia_poo.html">
+                    <div class="block">História POO</div>
+                </a>
+                <a href="../historia_cSRH/historia_cSRH.html">
+                    <div class="block">História C#</div>
+                </a>
+                <a href="../conceitos_poo/conceitos_poo.html">
+                    <div class="block">Conceitos de POO</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/script.js"></script>
+</body>
+</html>

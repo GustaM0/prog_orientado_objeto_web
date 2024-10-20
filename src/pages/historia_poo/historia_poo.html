@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="primary-header">
+        <div class="wrapper">
+            <div class="primary-header__inner">
+            <span class="logo">
+                <img src="../../assets/c-sharp-c.svg" alt="Logo" class="navbar-logo">
+            </span>
+            <ul class="nav-list">
+                <li><a href="#">Início</a></li>
+                <li><a id="open-modal-topic">Tópicos</a></li>
+                <li><a href="#">Curiosidades</a></li>
+                <li><a id="open-modal-group">Grupo</a></li>
+            </ul>
+            </div>
+        </div>
+        </header>
+    <main>
+        <div class="wrapper">
+            <h1 id="page-title">Programação Orientada a Objetos</h1> <br>
+            <h2>História da programação orientada a objetos</h2>
+            <div class="content-container">
+                <img src="./assets/Imagem1.png" alt="">
+                <h3>1. Arquitetura de Von Neumann </h3>
+                <p>A arquitetura de <strong>Von Neumann</strong>, descrita em 1945 por John von Neumann, é a base para a maioria dos 
+                    computadores modernos. Ela consiste em uma unidade de processamento central (CPU) com 
+                    uma unidade lógica aritmética (ALU) e registradores, uma unidade de controle, memória primária que 
+                    armazena tanto dados quanto instruções, e mecanismos de entrada e saída. A característica principal é 
+                    que dados e instruções compartilham o mesmo espaço de memória, sendo acessados pelo mesmo barramento, o 
+                    que significa que o processador precisa alternar entre buscar instruções e operar em dados.</p>
+                <img src="./assets/Imagem2.png" alt="">
+                <p><strong>Linguagens imperativas</strong>, como C e Pascal, refletem diretamente os princípios da arquitetura Von Neumann. 
+                    Nelas, temos variáveis que correspondem a células de memória e instruções sequenciais que controlam o fluxo do
+                    programa. Esse conceito de execução passo a passo é um alicerce importante para se compreender como <strong>a programação 
+                        orientada a objetos (POO)</strong> evoluiu posteriormente para organizar código de maneira mais modular.
+                </p>
+
+            </div>
+            <h2 id="b-01"></h2>
+            <div class="content-container">
+                <h3>2. Programação Imperativa</h3>
+                <p>A programação imperativa é um estilo de programação que segue uma sequência de instruções para alterar o estado do sistema. 
+                    Ela está diretamente ligada à arquitetura de Von Neumann, onde a memória armazena dados e instruções que são manipulados 
+                    pela CPU. Na programação imperativa, temos três características principais:</p>
+                <ul>
+                    <li><p><strong>Variáveis</strong>: Células de memória nomeadas que armazenam dados. Por exemplo, <strong>int count;</strong> define uma 
+                        variável para armazenar um valor inteiro.</p>
+                        <img src="./assets/Imagem3.png" alt="">
+                    </li>
+                    <li>
+                        <p><strong>Atribuição</strong>: Instruções que alteram o valor de uma variável, como <strong> count = 0;</strong>.</p>
+                        <img src="./assets/Imagem4.png" alt="">
+                    </li>
+                    <li>
+                        <p><strong>Iteração</strong>: Repetição de instruções até que uma condição seja satisfeita, como em loops <strong>for</strong> ou <strong>while</strong>.</p>
+                        <img src="./assets/Imagem5.png" alt="">
+                    </li>
+                </ul>
+                <p>Linguagens imperativas são essenciais para a transição para a programação orientada a objetos (POO), que introduz a ideia 
+                    de encapsular variáveis e operações relacionadas em objetos. Na POO, ao invés de focarmos apenas em alterar variáveis 
+                    e controlar o fluxo do programa, organizamos o código em componentes que refletem entidades do mundo real
+                    ou do domínio do problema.</p>
+            </div>
+            <h2 id="b-02"></h2>
+            <div class="content-container">
+                <h3>3. História e contexto de criação</h3>
+                <p><strong>3.1 Criação do simula</strong></p>
+                <p>- Ole-Johan Dahl e Kristen Nygaard começaram a desenvolver o SIMULA no início dos anos 60, a partir da necessidade de 
+                    simular sistemas complexos como o tráfego de navios nos fiordes noruegueses, utilizando a base da linguagem ALGOL.</p>
+                <img src="./assets/Imagem6.png" alt="">
+                <p>- Diferente do ALGOL, que seguia o modelo de programação imperativa alocando variáveis na stack durante a execução de 
+                    funções, o SIMULA introduziu a ideia de alocar objetos na heap. Isso permitiu que os objetos persistissem além da execução
+                    de uma função específica, sendo acessíveis por mais tempo.</p>
+                <img src="./assets/Imagem7.png" alt="">
+                <p>- SIMULA foi principalmente usado para simulações e introduziu o conceito de objetos. No entanto, a abstração oferecida pelos 
+                    objetos e o gerenciamento de memória eram caros para os computadores da época, limitando seu desempenho em máquinas com recursos
+                    limitados.</p>
+                <p>- Embora o SIMULA tenha introduzido os conceitos fundamentais da Programação Orientada a Objetos, foi com Smalltalk, 
+                    nos anos 70, que o paradigma se desenvolveu como um modelo completo e amplamente aplicável para o 	desenvolvimento de software.</p>
+            </div>
+            <h2 id="b-03"></h2>
+            <div class="content-container">
+                <h3>3.2 Surgimento do Smalltalk</h3>
+                <p>- O Smalltalk foi um sistema revolucionário desenvolvido no Xerox PARC na década de 1970, liderado por 	
+                    Alan Kay. O objetivo era criar um ambiente interativo e dinâmico que permitisse explorar novas formas de 
+                    interação com o computador, utilizando a POO como base central.</p>
+                    <img src="./assets/Imagem8.png" alt="">
+                <p>- Smalltalk foi um dos primeiros sistemas a implementar uma interface gráfica de usuário (GUI), que 
+                    influenciou fortemente o design de GUIs modernas, incluindo o que mais tarde seria adotado pela Apple e pela
+                    Microsoft.</p>
+                <img src="./assets/Imagem9.png" alt="">
+                <p>- Em Smalltalk, cada elemento do programa, desde números simples até sistemas complexos, são objetos, e todos interagem por meio de troca de mensagens.</p>
+                <p>- O Smalltalk levou a Orientação a Objetos para um novo patamar. No entanto, sua complexidade e o custo computacional 
+                    elevado para as máquinas da época dificultaram a adoção em larga escala, principalmente pelo costume dos desenvolvedores com a programação imperativa.</p>
+            </div>
+            <h2 id="b-04"></h2>
+            <div class="content-container">
+                <h3>3.3 POO nos anos 80</h3>
+                <p>- Ao longo dos anos 80, os processadores e memórias RAM ficaram mais rápidos e acessíveis, seguindo a 
+                    tendência prevista pela Lei de Moore, que afirmava que o número de transistores em um chip dobraria 
+                    aproximadamente a cada 18 meses. Essa melhoria contínua da eficiência do hardware possibilitou que linguagens 
+                    orientadas a objetos como Objective-C e C++ fossem adotadas de maneira mais ampla.</p>
+                    <img src="./assets/Imagem10.png" alt="">
+                <p>- Com mais poder de processamento disponível, a POO tornou-se uma abordagem prática para lidar com a complexidade 
+                    crescente dos softwares, oferecendo poder de abstração e polimorfismo sem comprometer o desempenho.</p>
+                <p>- Com a abstração, os programadores podiam focar no que os objetos deveriam fazer, em vez de como exatamente 
+                    eles faziam, enquanto o polimorfismo permitia que o software fosse estendido e modificado sem grandes reescritas, 
+                    tornando a manutenção mais eficiente.</p>
+                <p>- No entanto, isso veio com uma nova realidade: o tempo e o custo dos desenvolvedores passaram a ser mais caros 
+                    do que o próprio hardware. Assim, surgiu a necessidade de ferramentas que otimizassem o tempo de desenvolvimento 
+                    e manutenção, algo que a POO prometia resolver por meio de conceitos como reuso de código(herança e modularidade) 
+                    e polimorfismo.</p>
+            </div>
+            <h2 id="b-05"></h2>
+            <div class="content-container">
+                <h3>3.4 O que vem depois?</h3>
+                <p>- Após os anos 80, a Programação Orientada a Objetos continuou evoluindo significativamente, com 
+                    aprimoramentos nas linguagens e na infraestrutura de suporte. A popularização e o aprimoramento de 
+                    funcionalidades como a coleta de lixo (Garbage Collection), além de frameworks mais robustos, facilitaram 
+                    ainda mais o desenvolvimento.</p>
+                <p>- Nos anos 90, linguagens como Java e Ruby surgiram, trazendo maior robustez e automação do gerenciamento 
+                    de memória, além de forte suporte para arquiteturas distribuídas e sistemas corporativos.</p>
+                <p>- Nos anos 2000, frameworks como Spring para Java e .NET para C# impulsionaram ainda mais a adoção da 
+                    POO, possibilitando o desenvolvimento eficiente de aplicações empresariais e distribuídas. A partir daí, 
+                    a POO se estabeleceu como um dos principais paradigmas de desenvolvimento, adaptando-se a novas demandas 
+                    e se expandindo com a internet e os sistemas escaláveis.</p>
+            </div>
+            <!-- Referencias -->
+             <h2 id="rf-01"></h2>
+            <div class="content-container">
+                <p><strong>Referências:</strong></p>
+                <div class="reference-content">
+                    <p>SCIENCEDIRECT. Von Neumann architecture. Disponível em: <a target="_blank" href="https://www.sciencedirect.com/topics/computer-science/von-neumann-architecture#:~:text=The%20Von%20Neumann%20architecture%20consists,fetching%20and%20execution%20cycles%20seriously">https://www.sciencedirect.com/topics/computer-science/von-neumann-architecture#:~:text=The%20Von%20Neumann%20architecture%20consists,fetching%20and%20execution%20cycles%20seriously</a></p>
+                </div>
+                <div class="reference-content">
+                    <p>BLACK, Andrew P.;WETHERALL, David. Object-oriented programming: Some history, and challenges for the next fifty years. Elsevier, 2013. Disponível em: <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0890540113000795#se0030">https://www.sciencedirect.com/science/article/pii/S0890540113000795#se0030.</a></p>
+                </div>
+                <div class="reference-content">
+                    <p>BRIGHTMARBLES. A Brief History of Object-Oriented Programming. Disponível em: <a target="_blank" href="https://brightmarbles.io/blog/object-oriented-programming-history/">https://brightmarbles.io/blog/object-oriented-programming-history/.</a></p>
+                </div>
+
+            </div>
+            <!-- <h2 id="sts_plataforma">C# e a Plataforma .NET</h2>
+            <div class="content-container">
+                <h3>3.4 O que vem depois?</h3>
+                <p>- Após os anos 80, a Programação Orientada a Objetos continuou evoluindo significativamente, com aprimoramentos nas
+                    linguagens e na infraestrutura de suporte. A popularização e o aprimoramento de funcionalidades como a coleta de lixo 
+                    (Garbage Collection), além de frameworks mais robustos, facilitaram ainda mais o desenvolvimento.</p>
+                <p>- Nos anos 90, linguagens como Java e Ruby surgiram, trazendo maior robustez e automação do gerenciamento de memória, além de 
+                    forte suporte para arquiteturas distribuídas e sistemas corporativos.</p>
+                <p>- Nos anos 2000, frameworks como Spring para Java e .NET para C# impulsionaram ainda mais a adoção da POO, possibilitando 
+                    o desenvolvimento eficiente de aplicações empresariais e distribuídas. A partir daí, a POO se estabeleceu como um dos 
+                    principais paradigmas de desenvolvimento, adaptando-se a novas demandas e se expandindo com a internet e os sistemas escaláveis.</p>
+            </div> -->
+            
+        </div>
+        <div class="footer">
+
+        </div>
+    </main>
+        <!-- Modal de Tópicos -->
+    <div id="modal-topic" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal-topic">&times;</span>
+            <h2>Tópicos</h2>
+            <p class="bloco-modal" data-section="page-title">Arquitetura de Von Neumann</p>
+            <p class="bloco-modal" data-section="b-01">Programação Imperativa</p>
+            <p class="bloco-modal" data-section="b-02">História e contexto de criação</p>
+            <p class="bloco-modal" data-section="b-03">Surgimento do Smalltalk</p>
+            <p class="bloco-modal" data-section="b-04">POO nos anos 80</p>
+            <p class="bloco-modal" data-section="b-05">O que vem depois?</p>
+            <p class="bloco-modal" data-section="rf-01">Referencias</p>
+        </div>
+    </div>
+
+    <!-- Modal de Grupo -->
+    <div id="modal-group" class="modal" id="open-pages-nav">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal-group">&times;</span> 
+            <h2>Nosso Grupo</h2>
+            <p>Este é o conteúdo do modal.</p>
+        </div>
+    </div>
+    <!-- Botao flutuante -->
+    <div class="floating-button" id="open-pages-nav-btn">
+        <span class="icon-sandwich">&#9776;</span>
+    </div>
+
+    <!-- Modal de Navegação de Páginas -->
+    <div id="pages-nav" class="pages-nav-modal">
+        <div class="pages-nav-modal-content">
+            <span class="close-btn" id="close-pages-nav">&times;</span>
+            <h2>Ver um tema</h2>
+            <div class="blocks-container">
+                <a href="../historia_poo/historia_poo.html">
+                    <div class="block">História POO</div>
+                </a>
+                <a href="../historia_cSRH/historia_cSRH.html">
+                    <div class="block">História C#</div>
+                </a>
+                <a href="../conceitos_poo/conceitos_poo.html">
+                    <div class="block">Conceitos de POO</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/script.js"></script>
+</body>
+</html>
