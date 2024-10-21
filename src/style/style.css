@@ -138,7 +138,7 @@
     padding: 20px;
     border-radius: 10px;
     width: 80%; 
-    max-width: 500px; 
+    max-width: 700px; 
     max-height: 80%;
     overflow-y: auto;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -168,6 +168,10 @@
 
     & h2 {
         text-align: center;
+    }
+    & img {
+        display: block;
+        margin: 0 auto;
     }
 }
 
