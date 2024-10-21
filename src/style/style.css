@@ -409,3 +409,9 @@ body {
 h1, h2{
     margin: 40px 0px 10px 10px;
 }
+
+code {
+    background-color: #C6EFCE;
+    padding: 0.2rem;
+    border-radius: 0.25rem;
+}

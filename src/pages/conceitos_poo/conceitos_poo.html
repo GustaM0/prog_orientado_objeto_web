@@ -117,26 +117,109 @@
             <h2 id="b_07"></h2>
             <div class="content-container">
                 <h3>2.1.2. Questões de projeto sobre os TADS</h3>
-                <p>Atualmente, C# é uma das linguagens de programação mais populares do mundo, usada em uma 
-                    ampla variedade de aplicações, desde sistemas corporativos até jogos (com Unity), 
-                    desenvolvimento de aplicativos móveis (Xamarin), e aplicações web (ASP.NET Core). A linguagem 
-                    continua a evoluir, mantendo-se moderna e adotando novas funcionalidades para facilitar 
-                    o desenvolvimento e melhorar a performance.</p>
-                <div class="reference-content">
-                    <p>Referência: : Stack Overflow Developer Survey e TIOBE Index <a target="_blank" href="https://survey.stackoverflow.co">https://survey.stackoverflow.co</a></p>
+                <ul>
+                    <li><p><strong>Unidade sintática: </strong>O TAD deve encapsular a definição do tipo e seus comportamentos, geralmente através de classes.</p></li>
+                </ul>
+                <img src="./assets/Imagem15.png" alt="">
+                <ul>
+                    <li><p><strong>Parametrização de tipos: </strong>Permite que TADs sejam flexíveis e aceitem diferentes tipos de dados, como uma pilha que pode armazenar qualquer tipo</p></li>
+                </ul>
+                <img src="./assets/Imagem16.png	" alt="">
+                <ul>
+                    <li>
+                        <p><strong>Mecanismos de controle de acesso: </strong>Regulam a visibilidade e modificabilidade dos componentes de um TAD, utilizando modificadores de acesso como <code>public</code>, <code>private</code> e <code>protected</code>.</p>
+                    </li>
+                </ul>
+                <img src="./assets/Imagem17.png" alt="">
+            </div>
+            <h2 id="b_08"></h2>
+            <div class="content-container">
+                <h3>2.1.3. Construções de encapsulamento</h3>
+                <div>
+                    <h4>Grandes softwares têm três necessidades:</h4>
+                    <ol>
+                        <li>Uma maneira de organização, além da simples divisão em subprogramas.</li>
+                        <li>Realizar compilação parcial.</li>
+                        <li>Gerenciar a colisão de nomes.</li>
+                    </ol>
+                    <p>No cenário apresentado, o encapsulamento ajuda a agrupar códigos e dados logicamente relacionados em uma única unidade independente.</p>
                 </div>
             </div>
+            <h2 id="b_09"></h2>
             <div class="content-container">
-                <p>"O SRP diz que uma classe deve ter apenas uma razão para mudar, ou seja,
-                    ela deve ter apenas uma responsabilidade."
-                    <strong>Antes de aplicar o SRP:</strong></p>
-                <iframe src="https://www.onlinegdb.com/3bvT8x7Dd" 
-                    width="100%" 
-                    height="600px" 
-                    style="border: 1px solid #ccc; border-radius: 10px;">
-                </iframe>
+                <h3>2.2. Herança</h2>
+
+                <p>A herança surgiu para resolver limitações dos TADs tradicionais, permitindo que novas classes sejam criadas com base em outras já existentes. Dessa forma, é possível reutilizar código, organizar hierarquias e modificar funcionalidades por meio de sobrescrita de métodos.</p>
+
+                <h3>Conceitos relacionados:</h3>
+                <ul>
+                    <li><p><strong>Classes: </strong>Definem TADs em POO.</p></li>
+                    <li><p><strong>Objetos: </strong>Instâncias de classes.</p></li>
+                    <li><p><strong>Classe derivada (subclasse): </strong>Herda de uma classe pai (superclasse).</p></li>
+                    <li><p><strong>Métodos: </strong>Subprogramas que definem o comportamento das classes.</p></li>
+                </ul>
+
+                <p>A herança pode criar dependência entre classes, levando a um design rígido. Uma alternativa é a composição, onde uma classe "possui" outra como atributo, em vez de "ser uma" daquela classe.</p>
             </div>
-        </div>
+            <h2 id="b_10"></h2>
+            <div class="content-container">
+                <h3>2.3. Vinculação dinâmica</h3>
+                <p>Permite que uma variável polimórfica aponte para objetos de uma classe ou qualquer uma de suas subclasses. Quando métodos são chamados através dessas variáveis, a vinculação ao método específico ocorre em tempo de execução, promovendo flexibilidade.</p>
+                <img src="./assets/Imagem18.png" alt="">
+                <p>A vinculação dinâmica permite que os softwares sejam mais facilmente modificados, mas ao mesmo tempo tem um custo maior devido a chamadas desses métodos.</p>
+                <ul>
+                    <li><strong>Classes e métodos abstratos:</strong> Classes abstratas possuem pelo menos um método sem implementação e não podem ser instanciadas.</li>
+                </ul>
+            </div>
+            <h2 id="b_11"></h2>
+            <div class="content-container">
+                <h3>3. Questões de prijeto relevantes para POO</h3>
+                <h4>3.1. Exclusividade de Objetos</h4>
+                <p>Se tudo na minha linguagem é tratado como um objeto, isso proporciona maior elegância e uniformidade. No entanto, essa abordagem 
+                    pode resultar em um desempenho inferior em operações simples.
+                    
+                </p>
+                <p>Uma alternativa ao uso exclusivo de objetos é combinar um sistema tradicional de tipos de dados primitivos, no estilo imperativo, 
+                    com um modelo orientado a objetos. Embora essa estratégia ofereça maior rapidez em operações com tipos simples, ela pode tornar o 
+                    sistema de tipos da linguagem confuso para aqueles que não são especialistas.</p>
+            </div>
+            <h2 id="b_12"></h2>
+            <div class="content-container">
+                <h3>3.2. Subclasses são subtipos?</h3>
+                <img src="./assets/Imagem19.png" alt="">
+                <p>Uma subclasse é considerada um subtipo se mantiver a relação "é uma" com sua classe pai. Isso significa que objetos da subclasse podem ser utilizados em qualquer contexto onde a classe pai é válida, sem causar erros de tipo.</p>
+                <p>Além disso, os objetos da subclasse devem se comportar de maneira equivalente aos objetos da classe pai, conforme o princípio da substituição de Liskov. Isso implica que, se q(x) é uma propriedade demonstrável para objetos x do tipo T, 
+                    então q(y) deve ser verdadeiro para objetos y do tipo S, onde S é um subtipo de T.</p>
+            </div>
+            <h2 id="b_13"></h2>
+            <div class="content-container">
+                <h3>3.3. Herança simples ou Herança múltipla?</h3>
+                <ul>
+                    <li><strong>Herança simples:</strong> Permite derivar de apenas uma classe.</li>
+                    <li><strong>Herança múltipla:</strong> Permite derivar de várias classes, mas aumenta a complexidade e a dependência entre as classes.</li>
+                </ul>
+                <img src="./assets/Imagem20.png" alt="">
+                <p>Uma alternativa à herança múltipla são as interfaces, que definem um conjunto de métodos que devem ser implementados pela classe que as 
+                    adota. Uma classe pode implementar várias interfaces, proporcionando uma maneira mais flexível e organizada de compartilhar 
+                    comportamentos entre diferentes classes.</p>
+            </div>
+            <h2 id="rf_01"></h2>
+            <div class="content-container">
+                <p><strong>Referências:</strong></p>
+                <div class="reference-content">
+                    <p>Robert Sebesta, Concepts of programming languages, 9ª edição. Capítulo 11 e 12.</p>
+                </div>
+                <div class="reference-content">
+                    <p>C# Standard: DOTNET. C# Standard - Grammar. Disponível em: <a target="_blank" href="https://github.com/dotnet/csharpstandard/blob/V6-standard/standard/grammar.md">https://github.com/dotnet/csharpstandard/blob/V6-standard/standard/grammar.md</a></p>
+                </div>
+                <div class="reference-content">
+                    <p>Dr. Alan Kay on OOP: KAY, Alan. Dr. Alan Kay on the Meaning of “Object-Oriented Programming”. Disponível em: <a target="_blank" href="https://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en">https://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en</a></p>
+                </div>
+                <div class="reference-content">
+                    <p>Early History of Smalltalk: WorryDream. The Early History Of Smalltalk. Disponível em: <a target="_blank" href="https://worrydream.com/EarlyHistoryOfSmalltalk/">https://worrydream.com/EarlyHistoryOfSmalltalk/</a></p>
+                </div>
+            </div>
+            </div>
         <div class="footer">
 
         </div>
