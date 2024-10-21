@@ -87,30 +87,89 @@ C#:
                     </li>
                 </ul>
             </div>
-            <h2 id="b_03">Implementação e Performance</h2>
+            <h2 id="b_03">Diferenças</h2>
             <div class="content-container">
-                <p>Python é uma linguagem interpretada, o que significa que o código é executado 
-                    linha por linha, facilitando testes rápidos e desenvolvimento iterativo. No entanto, essa 
-                    abordagem também implica em uma execução mais lenta em comparação a linguagens 
-                    compiladas como C#.</p>
-                <p>C# é uma linguagem compilada, o que proporciona maior eficiência em termos 
-                    de uso de memória e tempo de execução, já que o código é traduzido diretamente para 
-                    linguagem de máquina antes de ser executado. Isso torna C# uma escolha superior para 
-                    aplicativos que exigem alta performance, como grandes sistemas corporativos e jogos 
-                    de alta complexidade.</p>
-                <div class="reference-content">
+                <p>As principais diferenças entre C# e Java no uso da Programação Orientada a 
+                    Objetos (POO) podem ser agrupadas em áreas chave que refletem a abordagem de cada 
+                    linguagem à POO. Essas diferenças impactam o modo como o código é escrito, 
+                    gerenciado e executado.
+                </p>
+                <h3>Propriedades vc Getters/Setters</h3>
+                <ul>
+                    <li>
+                        <p>
+                            C# suporta propriedades, que oferecem uma sintaxe mais simples e direta para 
+                            acessar atributos de uma classe. Com isso, é possível definir <code>get</code> e <code>set</code> em uma 
+                            única linha de código. Veja o exemplo: 
+                        </p>
+                    </li>
+                </ul>
+                <h3>Csharp</h3>
+<pre><code>public class Pessoa {
+    public string Nome { get; set; } // Propriedade
+} 
+</code></pre>
+                <ul>
+                    <li>
+                        <p>Já o Java não possui suporte nativo a propriedades. Em vez disso, é necessário 
+                            implementar manualmente métodos get e set para encapsular os atributos de 
+                            uma classe. Veja o exemplo: </p>
+                    </li>
+                </ul>
+                <h3>Java</h3>
+<pre><code>public class Pessoa { 
+    private String nome; 
+    public String getNome() { 
+    return nome; 
+    } 
+    public void setNome(String nome) { 
+    this.nome = nome; 
+    } 
+}</code></pre>
+                <h3>Delegates e Eventos</h3>
+                <ul>
+                    <li><p>C# Tem suporte nativo a delegates e eventos, permitindo passar métodos como 
+                        parâmetros e criar sistemas de eventos de maneira mais direta e simplificada. 
+                        Veja o exemplo abaixo: </p></li>
+                </ul>
+                <code>public delegate void MeuDelegate(string mensagem);</code> <br>
+                <code>public event MeuDelegate MeuEvento;</code>
+                <ul>
+                    <li>
+                        <p>Já o Java não possui delegates nativos. O gerenciamento de eventos geralmente 
+                            é feito por meio de interfaces, classes anônimas ou lambdas, tornando o 
+                            processo menos direto. Veja o exemplo abaixo: </p>
+                    </li>
+                </ul>
+<pre><code>public interface MeuEventoListener { 
+    void dispararEvento(String mensagem); 
+}</code></pre>
+                <h3>LINQ vs Streams:</h3>
+                <ul>
+                    <li><p>C# Oferece o LINQ (Language Integrated Query), que permite realizar consultas 
+                        e manipulações de coleções com uma sintaxe declarativa semelhante a SQL, 
+                        facilitando operações complexas sobre dados. Veja o exemplo abaixo: </p></li>
+                </ul>
+                <code>var pares = numeros.Where(n => n % 2 == 0).ToList();</code>
+                <ul>
+                    <li><p>Por outro lado, Java Introduziu Streams a partir do Java 8, que também permitem 
+                        realizar operações funcionais sobre coleções, mas com uma abordagem 
+                        ligeiramente diferente e mais ligada à programação funcional. Veja o exemplo 
+                        abaixo: </p></li>
+                </ul>
+                <code>List<Integer> pares = numeros.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());</code>
+                <!-- <div class="reference-content">
                     <p>Referência: <a target="_blank" href="https://www.halfnine.com/blog/post/c-sharp-vs- python">
                         https://www.halfnine.com/blog/post/c-sharp-vs- python</a></p>
-                </div>
+                </div> -->
             </div>
             <h2 id="b_04">Conclusão</h2>
             <div class="content-container">
-                <p>Se o objetivo for um desenvolvimento rápido e iterativo, especialmente em áreas 
-                    como web, ciência de dados e IA, Python oferece uma solução flexível e eficaz. No 
-                    entanto, se o foco for em performance, escalabilidade e robustez, especialmente em 
-                    ambientes empresariais ou de desenvolvimento de jogos, C# é uma escolha mais 
-                    adequada. A escolha entre Python e C# deve considerar o tipo de projeto e as 
-                    necessidades de desempenho e manutenção a longo prazo.</p>
+                <p>Embora C# e Java compartilhem muitas semelhanças no uso de POO, suas 
+                    diferenças surgem em aspectos como suporte a eventos, gerenciamento de recursos, e 
+                    facilidades como LINQ (C#) e Streams (Java). Essas nuances podem influenciar a 
+                    escolha de linguagem com base no tipo de projeto e nas preferências da equipe de 
+                    desenvolvimento. </p>
             </div>
         </div>
         <div class="footer">
