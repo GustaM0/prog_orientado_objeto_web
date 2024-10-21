@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="primary-header">
+        <div class="wrapper">
+            <div class="primary-header__inner">
+            <span class="logo">
+                <img src="../../assets/c-sharp-c.svg" alt="Logo" class="navbar-logo">
+            </span>
+            <ul class="nav-list">
+                <li><a href="#">Início</a></li>
+                <li><a id="open-modal-topic">Tópicos</a></li>
+                <li><a href="#">Curiosidades</a></li>
+                <li><a id="open-modal-group">Grupo</a></li>
+            </ul>
+            </div>
+        </div>
+        </header>
+    <main>
+        <!-- Aqui começa o conteudo da página -->
+        <div class="wrapper">
+            <!-- A tag page-title serve para colocar o titulo da pagina não precisa se preocupar com o ID -->
+            <!-- <h2 id="page-title">Programação Orientada a Objetos</h2> -->
+            <h2 id="b_01">Conceitos de programação Orientada a Objetos</h2>
+            <!-- Aqui começa o bloco -->
+            <div class="content-container">
+                <!-- Titulo dentro do bloco -->
+                <h3>1. Visão de Alan Kay</h3>
+                <!-- Adicionar imagem -->
+                <img src="./assets/Imagem11.png" alt="">
+                <!-- Adicionar paragrafo -->
+                <p>Alan Kay começou a desenvolver a Programação Orientada a Objetos nos anos 1960, influenciado pelo Sketchpad, Simula, 
+                    ARPANET e sua formação em biologia. Para ele, a POO se baseava em três pilares: troca de mensagens (messaging), retenção 
+                    local e ocultação de estado (local retention and protection), e ligação tardia extrema (extreme late-binding). Essas 
+                    ideias definiam a POO como uma filosofia de comunicação e modularidade, diferenciando-se das abordagens centradas em dados.</p>
+                <!-- Essa div (reference-content) para adicionar referencia dentro do bloco -->
+                <div class="reference-content">
+                    <p>Referência: <a target="_blank" href="https://pt.wikipedia.org/wiki/Simula">
+                        https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-13</a></p>
+                </div>
+            </div>
+            <!-- <> Repetindo a estrutura <> -->
+            <h2 id="b_02"></h2>
+            <div class="content-container">
+                <h3>1.1. Troca de Mensagens</h3>
+                <img src="./assets/Imagem12.png" alt="">
+                <ul>
+                    <li><p><strong>Objetos como "células" que trocam mensagens: </strong>Kay comparava objetos a células biológicas, 
+                        que se comunicam enviando e recebendo sinais. Essa comunicação ocorre por meio de trocas de mensagens, 
+                        em vez de acesso direto aos dados.</p></li>
+                    <li><p><strong>Encapsulamento e eliminação de acesso direto a dados: </strong>Para Kay, o foco era substituir a 
+                        manipulação direta de dados pela comunicação através de mensagens, o que promove a ocultação de informações e reforça 
+                        a independência dos objetos. Isso assegura que cada objeto gerencie seu próprio estado sem interferência externa.</p></li>
+                    <li><p><strong>Programadores não são "Máquinas de Turing": </strong>Ele argumentava que a POO deveria se afastar do modelo 
+                        tradicional de manipulação de dados e se aproximar de uma comunicação mais natural e orgânica, semelhante a sistemas biológicos ou 
+                        distribuídos.</p></li>
+                </ul>
+            </div>
+            <!-- <h2 id="b_03"></h2>
+            <div class="content-container">
+                <h3>1.2. Retenção local e ocultação de estado</h3>
+                <img src="./assets/Imagem13.png" alt="">
+                <ul>
+                    <li><p><strong>Encapsulamento como princípio fundamental: </strong></p>Na visão de Kay, o encapsulamento era central 
+                        para a POO, limitando o acesso ao estado interno do objeto. Isso permitia que os objetos controlassem suas próprias 
+                        modificações, reforçando a ideia de retenção local, onde cada objeto mantém seu estado de forma segura.</li>
+                    <li><p><strong>Objetos como entidades independentes que gerenciam seu próprio estado: </strong>O acesso direto ao 
+                        estado de um objeto era evitado, promovendo uma abordagem em que a manipulação de dados ocorria exclusivamente através 
+                        de mensagens, permitindo que os objetos fossem "agentes ativos" que respondem a estímulos.</p></li>
+                    <li><p><strong>Substituição de dados acessíveis por comportamentos encapsulados: </strong></p>Em vez de ver os objetos 
+                        apenas como recipientes de dados com métodos para manipulação, Kay via os objetos como possuidores de comportamentos 
+                        internos que respondiam dinamicamente às mensagens recebidas.</li>
+                </ul>
+            </div>
+            <h2 id="b_04"></h2>
+            <div class="content-container">
+                <h3>1.3. Ligação tardia</h3>
+                <ul>
+                    <li><p><strong>Dinamismo e ligação tardia extrema: </strong></p>Para Kay, a ligação tardia permitia adiar a decisão sobre qual método 
+                        seria chamado até o momento da execução. Isso possibilita que diferentes objetos respondessem à mesma mensagem de maneiras diversas, 
+                        dependendo do contexto.</li>
+                    <li><p><strong>Polimorfismo como extensão natural da ligação tardia: </strong></p>O polimorfismo, na visão de Kay, envolvia a capacidade 
+                        dos objetos de responder de forma flexível a mensagens semelhantes. Isso ia além da sobrescrita de métodos em subclasses, permitindo 
+                        comportamentos dinâmicos que se ajustavam ao contexto.</li>
+                    <li><p><strong>Composição em vez de herança rígida: </strong></p>Ele via a herança estrita como uma limitação e preferia sistemas onde 
+                        os objetos pudessem evoluir e modificar seu comportamento de forma fluida. A composição e a comunicação entre objetos eram mais importantes
+                        do que uma hierarquia fixa.</li>
+                </ul>
+            </div>
+            <h2 id="b_05"></h2>
+            <div class="content-container">
+                <h3>1.4. NON-DATA POO vs Tipos abstratos de dados</h3>
+                <p>A visão de Alan Kay sobre POO era centrada na eliminação de dados acessíveis e na comunicação por mensagens, com os objetos agindo como 
+                    "agentes ativos" que gerenciam seu próprio estado e interagem dinamicamente. Para ele, a POO não deveria focar em dados, mas sim no 
+                    comportamento e na flexibilidade de objetos que respondem a estímulos. No entanto, a comunidade de computação seguiu um caminho diferente, 
+                    adotando a POO como uma forma de encapsular dados e expor operações por meio de interfaces, seguindo a abordagem dos Abstract Data Types (ADTs).</p>
+            </div>
+            <h2 id="b_06"></h2>
+            <div class="content-container">
+                <h3>2. Robert Sebesta sobre POO: o que uma linguagem deve ter para suportar orientação a objetos?</h3>
+                <p>Para que uma linguagem de programação suporte orientação a objetos (POO), ela precisa fornecer suporte a 
+                    três elementos-chave: tipos de dados abstratos, herança e vinculação dinâmica de chamadas a métodos.</p>
+                <h3>2.1. Tipos abstratos de dados</h3>
+                <p>A abstração é a capacidade de representar algo apenas com seus atributos e comportamentos mais relevantes, removendo 
+                    detalhes desnecessários. Ela é fundamental para combater a complexidade dos sistemas, pois permite focar nos aspectos essenciais.</p>
+
+                <p>Existem dois tipos principais de abstração:</p>
+
+                <ul>
+                    <li><p>Abstração de processos: Utiliza subprogramas para representar ações específicas, como <code>sortInt(list, listLen)</code>.</p></li>
+                    <li><p>Abstração de dados: Representa um dado com seus atributos essenciais, sem se preocupar com os detalhes de implementação, 
+                        por exemplo, tratar um dado <code>Pessoa</code> apenas com as informações mais significativas.</p></li>
+                </ul>
+
+                <p>Um tipo abstrato de dado (TAD) é um exemplo de abstração de dados e deve satisfazer duas condições:</p>
+
+                <p><strong>1. </strong>O programa que usa o TAD não precisa conhecer sua implementação interna, apenas as operações disponíveis, promovendo 
+                    encapsulamento e ocultação de informações.</p>
+                <p><strong>2. </strong>A implementação do tipo e seus protocolos de operação devem estar contidos em uma única unidade sintática.</p>
+                <p>Um exemplo classico de tipo abstrato de dados é uma pilha:</p>
+                <img src="./assets/Imagem14.png" alt="">
+            </div>
+            <h2 id="b_07"></h2>
+            <div class="content-container">
+                <h3>2.1.2. Questões de projeto sobre os TADS</h3>
+                <ul>
+                    <li><p><strong>Unidade sintática: </strong>O TAD deve encapsular a definição do tipo e seus comportamentos, geralmente através de classes.</p></li>
+                </ul>
+                <img src="./assets/Imagem15.png" alt="">
+                <ul>
+                    <li><p><strong>Parametrização de tipos: </strong>Permite que TADs sejam flexíveis e aceitem diferentes tipos de dados, como uma pilha que pode armazenar qualquer tipo</p></li>
+                </ul>
+                <img src="./assets/Imagem16.png	" alt="">
+                <ul>
+                    <li>
+                        <p><strong>Mecanismos de controle de acesso: </strong>Regulam a visibilidade e modificabilidade dos componentes de um TAD, utilizando modificadores de acesso como <code>public</code>, <code>private</code> e <code>protected</code>.</p>
+                    </li>
+                </ul>
+                <img src="./assets/Imagem17.png" alt="">
+            </div>
+            <h2 id="b_08"></h2>
+            <div class="content-container">
+                <h3>2.1.3. Construções de encapsulamento</h3>
+                <div>
+                    <h4>Grandes softwares têm três necessidades:</h4>
+                    <ol>
+                        <li>Uma maneira de organização, além da simples divisão em subprogramas.</li>
+                        <li>Realizar compilação parcial.</li>
+                        <li>Gerenciar a colisão de nomes.</li>
+                    </ol>
+                    <p>No cenário apresentado, o encapsulamento ajuda a agrupar códigos e dados logicamente relacionados em uma única unidade independente.</p>
+                </div>
+            </div>
+            <h2 id="b_09"></h2>
+            <div class="content-container">
+                <h3>2.2. Herança</h2>
+
+                <p>A herança surgiu para resolver limitações dos TADs tradicionais, permitindo que novas classes sejam criadas com base em outras já existentes. Dessa forma, é possível reutilizar código, organizar hierarquias e modificar funcionalidades por meio de sobrescrita de métodos.</p>
+
+                <h3>Conceitos relacionados:</h3>
+                <ul>
+                    <li><p><strong>Classes: </strong>Definem TADs em POO.</p></li>
+                    <li><p><strong>Objetos: </strong>Instâncias de classes.</p></li>
+                    <li><p><strong>Classe derivada (subclasse): </strong>Herda de uma classe pai (superclasse).</p></li>
+                    <li><p><strong>Métodos: </strong>Subprogramas que definem o comportamento das classes.</p></li>
+                </ul>
+
+                <p>A herança pode criar dependência entre classes, levando a um design rígido. Uma alternativa é a composição, onde uma classe "possui" outra como atributo, em vez de "ser uma" daquela classe.</p>
+            </div>
+            <h2 id="b_10"></h2>
+            <div class="content-container">
+                <h3>2.3. Vinculação dinâmica</h3>
+                <p>Permite que uma variável polimórfica aponte para objetos de uma classe ou qualquer uma de suas subclasses. Quando métodos são chamados através dessas variáveis, a vinculação ao método específico ocorre em tempo de execução, promovendo flexibilidade.</p>
+                <img src="./assets/Imagem18.png" alt="">
+                <p>A vinculação dinâmica permite que os softwares sejam mais facilmente modificados, mas ao mesmo tempo tem um custo maior devido a chamadas desses métodos.</p>
+                <ul>
+                    <li><strong>Classes e métodos abstratos:</strong> Classes abstratas possuem pelo menos um método sem implementação e não podem ser instanciadas.</li>
+                </ul>
+            </div>
+            <h2 id="b_11"></h2>
+            <div class="content-container">
+                <h3>3. Questões de prijeto relevantes para POO</h3>
+                <h4>3.1. Exclusividade de Objetos</h4>
+                <p>Se tudo na minha linguagem é tratado como um objeto, isso proporciona maior elegância e uniformidade. No entanto, essa abordagem 
+                    pode resultar em um desempenho inferior em operações simples.
+                    
+                </p>
+                <p>Uma alternativa ao uso exclusivo de objetos é combinar um sistema tradicional de tipos de dados primitivos, no estilo imperativo, 
+                    com um modelo orientado a objetos. Embora essa estratégia ofereça maior rapidez em operações com tipos simples, ela pode tornar o 
+                    sistema de tipos da linguagem confuso para aqueles que não são especialistas.</p>
+            </div>
+            <h2 id="b_12"></h2>
+            <div class="content-container">
+                <h3>3.2. Subclasses são subtipos?</h3>
+                <img src="./assets/Imagem19.png" alt="">
+                <p>Uma subclasse é considerada um subtipo se mantiver a relação "é uma" com sua classe pai. Isso significa que objetos da subclasse podem ser utilizados em qualquer contexto onde a classe pai é válida, sem causar erros de tipo.</p>
+                <p>Além disso, os objetos da subclasse devem se comportar de maneira equivalente aos objetos da classe pai, conforme o princípio da substituição de Liskov. Isso implica que, se q(x) é uma propriedade demonstrável para objetos x do tipo T, 
+                    então q(y) deve ser verdadeiro para objetos y do tipo S, onde S é um subtipo de T.</p>
+            </div>
+            <h2 id="b_13"></h2>
+            <div class="content-container">
+                <h3>3.3. Herança simples ou Herança múltipla?</h3>
+                <ul>
+                    <li><strong>Herança simples:</strong> Permite derivar de apenas uma classe.</li>
+                    <li><strong>Herança múltipla:</strong> Permite derivar de várias classes, mas aumenta a complexidade e a dependência entre as classes.</li>
+                </ul>
+                <img src="./assets/Imagem20.png" alt="">
+                <p>Uma alternativa à herança múltipla são as interfaces, que definem um conjunto de métodos que devem ser implementados pela classe que as 
+                    adota. Uma classe pode implementar várias interfaces, proporcionando uma maneira mais flexível e organizada de compartilhar 
+                    comportamentos entre diferentes classes.</p>
+            </div> -->
+
+            <!-- Referências no fim da página -->
+            <h2 id="rf_01"></h2>
+            <div class="content-container">
+                <p><strong>Referências:</strong></p>
+                <div class="reference-content">
+                    <p>Robert Sebesta, Concepts of programming languages, 9ª edição. Capítulo 11 e 12.</p>
+                </div>
+                <div class="reference-content">
+                    <p>C# Standard: DOTNET. C# Standard - Grammar. Disponível em: <a target="_blank" href="https://github.com/dotnet/csharpstandard/blob/V6-standard/standard/grammar.md">https://github.com/dotnet/csharpstandard/blob/V6-standard/standard/grammar.md</a></p>
+                </div>
+                <div class="reference-content">
+                    <p>Dr. Alan Kay on OOP: KAY, Alan. Dr. Alan Kay on the Meaning of “Object-Oriented Programming”. Disponível em: <a target="_blank" href="https://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en">https://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en</a></p>
+                </div>
+                <div class="reference-content">
+                    <p>Early History of Smalltalk: WorryDream. The Early History Of Smalltalk. Disponível em: <a target="_blank" href="https://worrydream.com/EarlyHistoryOfSmalltalk/">https://worrydream.com/EarlyHistoryOfSmalltalk/</a></p>
+                </div>
+            </div>
+            </div>
+            <!-- ============================================================ Daqui pra baixo não é necessário mecher ============================================================ -->
+             <!-- ir fazendo cópias seguindo este modelo -->
+            <!-- ================================================================================================================================================================= -->
+        <div class="footer">
+
+        </div>
+    </main>
+        <!-- Modal de Tópicos -->
+        <div id="modal-topic" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal-topic">&times;</span>
+                <h2>Tópicos</h2>
+                <p class="bloco-modal" data-section="sts_historia">História do C#</p>
+                <p class="bloco-modal" data-section="sts_contexto">Contexto e Motivação</p>
+                <p class="bloco-modal" data-section="sts_lancamento">Lançamento e Primeira Versão</p>
+                <p class="bloco-modal" data-section="sts_evolucao">Evolução e Novas Funcionalidades</p>
+                <p class="bloco-modal" data-section="sts_plataforma">C# e a Plataforma .NET</p>
+                <p class="bloco-modal" data-section="sts_hoje">C# Hoje</p>
+            </div>
+        </div>
+
+    <!-- Modal de Grupo -->
+    <div id="modal-group" class="modal" id="open-pages-nav">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal-group">&times;</span> 
+            <h2>Nosso Grupo</h2>
+            <p>Este é o conteúdo do modal.</p>
+        </div>
+    </div>
+    <!-- Botao flutuante -->
+    <div class="floating-button" id="open-pages-nav-btn">
+        <span class="icon-sandwich">&#9776;</span>
+    </div>
+
+    <!-- Modal de Navegação de Páginas -->
+    <div id="pages-nav" class="pages-nav-modal">
+        <div class="pages-nav-modal-content">
+            <span class="close-btn" id="close-pages-nav">&times;</span>
+            <h2>Ver um tema</h2>
+            <div class="blocks-container">
+                <a href="../historia_poo/historia_poo.html">
+                    <div class="block">História POO</div>
+                </a>
+                <a href="../historia_cSRH/historia_cSRH.html">
+                    <div class="block">História C#</div>
+                </a>
+                <a href="../conceitos_poo/conceitos_poo.html">
+                    <div class="block">Conceitos de POO</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/script.js"></script>
+</body>
+</html>

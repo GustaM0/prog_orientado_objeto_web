@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="primary-header">
+        <div class="wrapper">
+            <div class="primary-header__inner">
+            <span class="logo">
+                <img src="../../assets/c-sharp-c.svg" alt="Logo" class="navbar-logo">
+            </span>
+            <ul class="nav-list">
+                <li><a href="#">Início</a></li>
+                <li><a id="open-modal-topic">Tópicos</a></li>
+                <li><a href="#">Curiosidades</a></li>
+                <li><a id="open-modal-group">Grupo</a></li>
+            </ul>
+            </div>
+        </div>
+        </header>
+    <main>
+        <div class="wrapper">
+            <h2 id="page-title">C# vs Python: Flexibilidade e Implementação.</h2> <br>
+            <!-- <h2 id="b_01"></h2> -->
+            <div class="content-container">
+                <p>Quando se compara C# e Python em termos de flexibilidade e implementação, 
+                    cada linguagem apresenta vantagens distintas, dependendo do tipo de projeto e dos 
+                    requisitos.</p>
+            </div>
+            <h2 id="b_02">Flexibilidade</h2>
+            <div class="content-container">
+                <p>Python é amplamente conhecido por sua flexibilidade. Ele é dinamicamente 
+                    tipado, o que significa que os tipos de variáveis são definidos durante a execução, 
+                    permitindo mudanças rápidas no código e uma curva de aprendizado mais suave. 
+                    Python se destaca em prototipagem rápida e desenvolvimento de scripts ou projetos de 
+                    machine learning, graças à sua vasta gama de bibliotecas e frameworks (como Django, 
+                    Flask e TensorFlow).</p>
+                <p>Por outro lado, C# é uma linguagem estaticamente tipada, exigindo que os tipos 
+                    de variáveis sejam definidos antes da execução, o que proporciona maior segurança e 
+                    robustez do código, especialmente em projetos maiores. Embora isso torne o 
+                    desenvolvimento inicial mais lento em comparação com Python, a tipagem estática 
+                    ajuda a evitar muitos erros que poderiam ocorrer durante a execução. C# também é 
+                    altamente estruturado, o que o torna ideal para projetos maiores e mais complexos, 
+                    como o desenvolvimento de jogos (com Unity) e aplicativos empresariais, 
+                    especialmente com o suporte da plataforma .NET.</p>
+                <div class="reference-content">
+                    <p>Referência: <a target="_blank" href="https://www.scaler.com/topics/csharp-vs- pyth on/">
+                        https://www.scaler.com/topics/csharp-vs- pyth on/</a></p>
+                </div>
+                <div class="reference-content">
+                    <p><a target="_blank" href="https://softwarelogic.co/blog/python-vs-c-benefits-differences-use-cases/">
+                        https://softwarelogic.co/blog/python-vs-c-benefits-differences-use-cases/</a></p>
+                </div>
+            </div>
+            <h2 id="b_03">Implementação e Performance</h2>
+            <div class="content-container">
+                <p>Python é uma linguagem interpretada, o que significa que o código é executado 
+                    linha por linha, facilitando testes rápidos e desenvolvimento iterativo. No entanto, essa 
+                    abordagem também implica em uma execução mais lenta em comparação a linguagens 
+                    compiladas como C#.</p>
+                <p>C# é uma linguagem compilada, o que proporciona maior eficiência em termos 
+                    de uso de memória e tempo de execução, já que o código é traduzido diretamente para 
+                    linguagem de máquina antes de ser executado. Isso torna C# uma escolha superior para 
+                    aplicativos que exigem alta performance, como grandes sistemas corporativos e jogos 
+                    de alta complexidade.</p>
+                <div class="reference-content">
+                    <p>Referência: <a target="_blank" href="https://www.halfnine.com/blog/post/c-sharp-vs- python">
+                        https://www.halfnine.com/blog/post/c-sharp-vs- python</a></p>
+                </div>
+            </div>
+            <h2 id="b_04">Conclusão</h2>
+            <div class="content-container">
+                <p>Se o objetivo for um desenvolvimento rápido e iterativo, especialmente em áreas 
+                    como web, ciência de dados e IA, Python oferece uma solução flexível e eficaz. No 
+                    entanto, se o foco for em performance, escalabilidade e robustez, especialmente em 
+                    ambientes empresariais ou de desenvolvimento de jogos, C# é uma escolha mais 
+                    adequada. A escolha entre Python e C# deve considerar o tipo de projeto e as 
+                    necessidades de desempenho e manutenção a longo prazo.</p>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </main>
+        <!-- Modal de Tópicos -->
+        <div id="modal-topic" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal-topic">&times;</span>
+                <h2>Tópicos</h2>
+                <p class="bloco-modal" data-section="sts_historia">História do C#</p>
+                <p class="bloco-modal" data-section="sts_contexto">Contexto e Motivação</p>
+                <p class="bloco-modal" data-section="sts_lancamento">Lançamento e Primeira Versão</p>
+                <p class="bloco-modal" data-section="sts_evolucao">Evolução e Novas Funcionalidades</p>
+                <p class="bloco-modal" data-section="sts_plataforma">C# e a Plataforma .NET</p>
+                <p class="bloco-modal" data-section="sts_hoje">C# Hoje</p>
+            </div>
+        </div>
+
+    <!-- Modal de Grupo -->
+    <div id="modal-group" class="modal" id="open-pages-nav">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal-group">&times;</span> 
+            <h2>Nosso Grupo</h2>
+            <p>Este é o conteúdo do modal.</p>
+        </div>
+    </div>
+    <!-- Botao flutuante -->
+    <div class="floating-button" id="open-pages-nav-btn">
+        <span class="icon-sandwich">&#9776;</span>
+    </div>
+
+    <!-- Modal de Navegação de Páginas -->
+    <div id="pages-nav" class="pages-nav-modal">
+        <div class="pages-nav-modal-content">
+            <span class="close-btn" id="close-pages-nav">&times;</span>
+            <h2>Ver um tema</h2>
+            <div class="blocks-container">
+                <a href="../historia_poo/historia_poo.html">
+                    <div class="block">História POO</div>
+                </a>
+                <a href="../historia_cSRH/historia_cSRH.html">
+                    <div class="block">História C#</div>
+                </a>
+                <a href="../conceitos_poo/conceitos_poo.html">
+                    <div class="block">Conceitos de POO</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/script.js"></script>
+</body>
+</html>
