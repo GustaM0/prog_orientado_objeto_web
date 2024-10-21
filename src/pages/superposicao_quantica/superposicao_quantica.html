@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="primary-header">
+        <div class="wrapper">
+            <div class="primary-header__inner">
+            <span class="logo">
+                <img src="../../assets/c-sharp-c.svg" alt="Logo" class="navbar-logo">
+            </span>
+            <ul class="nav-list">
+                <li><a href="#">Início</a></li>
+                <li><a id="open-modal-topic">Tópicos</a></li>
+                <li><a href="#">Curiosidades</a></li>
+                <li><a id="open-modal-group">Grupo</a></li>
+            </ul>
+            </div>
+        </div>
+        </header>
+    <main>
+        <div class="wrapper">
+            <h2 id="page-title">Superposição Quântica com um Simulador da polarização de fótons</h2>
+            <div class="content-container">
+                <p><strong>Por que</strong> estou apresentando esse simulador em uma apresentação sobre POO?</p>
+                <p><strong>Por que</strong> usamos a polarização de fótons?</p>
+                <p>Estamos usando a polarização de fótons no simulador porque o comportamento dos
+                    fótons se assemelha ao dos qubits.</p>
+            </div>
+            <h2 id="b_01"> Polarização de Fótons</h2>
+            <div class="content-container">
+                <p>Umfóton é uma partícula de luz. Pense na polarização como a inclinação de uma
+                    linha - ela pode estar alinhada em diferentes ângulos. Por exemplo, um fóton pode
+                    estar polarizado em 0°, 45°, 90°, e assim por diante. Polarização é uma propriedade
+                    que descreve a direção em que o campo elétrico do fóton oscila.</p>
+                <img src="./assets/Imagem1.png" alt="">
+
+            </div>
+            <h2 id="b_02">Superposição</h2>
+            <div class="content-container">
+                <p>Em termos simples, superposição é quando um qubit, que é a unidade básica de informação
+                    em um computador quântico, pode estar em múltiplos estados ao mesmo tempo. No caso 
+                    de um bit clássico, ele pode ser 0 ou 1, mas um qubit pode ser uma combinação dos dois ao mesmo tempo, até que seja medido."</p>
+                <p><strong>Como o Simulador Funciona:</strong></p>
+                No simulador, estamos medindo a polarização de um fóton para ver se ele está alinhado (representado 
+                por <code>true</code>) ou desalinhado (representado por <code>false</code>) com um aparelho de medição. A função 
+                <code>measurePolarization()</code> calcula a diferença de ângulo entre o fóton e o aparelho de medição. 
+                Se a diferença de ângulo for grande, a probabilidade de o fóton estar desalinhado aumenta. 
+                Se a diferença for pequena, a probabilidade de alinhamento aumenta.
+                <p><strong>Explicação do código:</strong></p>
+                Aqui no código, usamos a função <code>Math.cos()</code> para calcular essa probabilidade com
+                    base na diferença de ângulo. Quanto mais próximo o ângulo do fóton estiver do
+                    aparelho de medição, maior a probabilidade de ele estar alinhado.</p>
+                <img src="./assets/Imagem2.png" alt="">
+                <p><strong>Explicação dos resultados:</strong></p>
+                <ul>
+                    <li><p>Serodarmososimulador muitas vezes com o fóton em superposição (por
+                        exemplo, a 45° com relação a um aparelho de medição a 90°), veremos
+                        resultados probabilísticos. Isso significa que, às vezes, o fóton parecerá estar
+                        alinhado, e outras vezes desalinhado. A média desses resultados nos mostrará
+                        que o fóton está em uma combinação dos dois estados– exatamente o que
+                        chamamos de superposição.</p></li>
+                    <li><p>Quandomedimosumfótonqueestá a 45°, estamos essencialmente 'forçando'
+                        ele a escolher um dos estados (alinhado ou desalinhado), mas antes dessa
+                        medição, ele estava em um estado misto, que chamamos de superposição.
+                    </p></li>
+                </ul>
+                <p>Portanto, a polarização de fótons é uma maneira prática de ilustrar a superposição.
+                    Quando medimos um estado sobreposto, ele colapsa para um valor definido, assim
+                    como ocomportamento esperado em qubits em um computador quântico.</p>
+
+            </div>
+            <h2 id="b_03">Relacionando Superposição com Autômatos</h2>
+            <div class="content-container">
+                <h3>Introdução aos Autômatos e Superposição:</h3>
+                <ul>
+                    <li><p>Agora vamos trazer uma relação entre a superposição quântica e os autômatos. 
+                        Na computação clássica, temos autômatos finitos, que podem ser determinísticos ou 
+                        não-determinísticos. Os autômatos determinísticos possuem um estado bem definido para cada 
+                        transição, enquanto os autômatos não-determinísticos podem estar em múltiplos estados possíveis 
+                        ao mesmo tempo.</p></li>
+                </ul>
+                <h3>Relacionando automatos com Superposição</h3>
+                <ul>
+                    <li><p>Podemos pensar em um autômato quântico como um tipo de autômato não-determinístico, onde os 
+                        qubits, ao invés de estarem em um único estado, podem estar em uma superposição de estados. Assim 
+                        como em um autômato não-determinístico, onde várias transições podem ocorrer ao mesmo tempo, em 
+                        um sistema quântico, o qubit pode estar em múltiplas combinações de 0 e 1 até que seja medido.</p></li>
+                </ul>
+                <ul>
+                    <li><p>Ao medir o estado de um qubit, assim como em um autômato determinístico, ocorre o 'colapso', 
+                        onde o qubit assume um estado definitivo, assim como o autômato clássico escolhe uma transição 
+                        com base na entrada. No caso da computação quântica, essa transição é probabilística, mas segue 
+                        o mesmo princípio.</p></li>
+                </ul>
+                <p><strong>Exemplo:</strong></p>
+                <ul>
+                    <li><p>Por exemplo, quando medimos o estado de polarização de um fóton no simulador, estamos 
+                        essencialmente fazendo uma transição de um estado de superposição (entre 0 e 1) para um estado 
+                        determinado, da mesma forma que um autômato faz uma transição de estado baseada em entrada. </p></li>
+                </ul>
+                <p>Com essa apresentação, mostrei como conceitos fundamentais da computação quântica, como superposição, 
+                    podem ser simulados com código usando programação orientada a objetos. Além disso, vimos como a 
+                    superposição pode ser relacionada a autômatos não-determinísticos, trazendo uma conexão entre a 
+                    computação clássica e a quântica.</p>
+            </div>
+            <h2 id="rf_01"></h2>
+            <div class="content-container">
+                <p><strong>Referências: </strong></p>
+                <div class="reference-content">
+                    <p>Quantum computing: A new paradigm <a target="_blank" href="https://nap.nationalacademies.org/read/25196/chapter/4#27">https://nap.nationalacademies.org/read/25196/chapter/4#27</a></p>
+                </div>
+                <div class="reference-content">
+                    <p>IBM Quantum - (paradigma da computação quântica, superposição, emaranhamento) <a target="_blank" href="https://www.ibm.com/topics/quantum-computing">https://www.ibm.com/topics/quantum-computing</a></p>
+                </div>
+                <div class="reference-content">
+                    <p>Autômato finito quântico: <a target="_blank" href="https://en.wikipedia.org/wiki/Quantum_finite_automaton">https://en.wikipedia.org/wiki/Quantum_finite_automaton</a></p>
+                </div>
+                <div class="reference-content">
+                    <p>Quantum Information Theory – an Invitation: <a target="_blank" href="https://arxiv.org/pdf/quant-ph/0101061">https://arxiv.org/pdf/quant-ph/0101061</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </main>
+        <!-- Modal de Tópicos -->
+        <div id="modal-topic" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal-topic">&times;</span>
+                <h2>Tópicos</h2>
+                <p class="bloco-modal" data-section="page-title">Superposição Quântica com um Simulador da polarização de fótons</p>
+                <p class="bloco-modal" data-section="b_01">Polarização de Fótons</p>
+                <p class="bloco-modal" data-section="b_02">Superposição</p>
+                <p class="bloco-modal" data-section="b_03">Relacionando Superposição com Autômatos</p>
+                <p class="bloco-modal" data-section="rf_01">Referências</p>
+            </div>
+        </div>
+
+    <!-- Modal de Grupo -->
+    <div id="modal-group" class="modal" id="open-pages-nav">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal-group">&times;</span> 
+            <h2>Nosso Grupo</h2>
+            <p>Este é o conteúdo do modal.</p>
+        </div>
+    </div>
+    <!-- Botao flutuante -->
+    <div class="floating-button" id="open-pages-nav-btn">
+        <span class="icon-sandwich">&#9776;</span>
+    </div>
+
+    <!-- Modal de Navegação de Páginas -->
+    <div id="pages-nav" class="pages-nav-modal">
+        <div class="pages-nav-modal-content">
+            <span class="close-btn" id="close-pages-nav">&times;</span>
+            <h2>Ver um tema</h2>
+            <div class="blocks-container">
+                <a href="../historia_poo/historia_poo.html">
+                    <div class="block">1. História POO</div>
+                </a>
+                <!-- vantages e desvantagens -->
+                <a href="../conceitos_poo/conceitos_poo.html">
+                    <div class="block">2. Conceitos de POO</div>
+                </a>
+                <a href="../dominios_aplicacoes/dominios_aplicacoes.html">
+                    <div class="block">3. Domínio de aplicações</div>
+                </a>
+                <a href="../contribuicao_influencia/contribuicao_influencia.html">
+                    <div class="block">4. Contribuição e influencia para a computação</div>
+                </a>
+                <!-- analise da linguagem -->
+                <a href="../historia_cSRH/historia_cSRH.html">
+                    <div class="block">5. História C#</div>
+                </a>
+                <a href="../linha_do_tempo/linha_do_tempo.html">
+                    <div class="block">6. Linha do tempo POO</div>
+                </a>
+                <a href="../cSRH_vs_python/cSRH_vs_python.html">
+                    <div class="block">7. C# vs Python</div>
+                </a>
+                <a href="../cSRH_vs_java/cSRH_vs_java.html">
+                    <div class="block">8. C# vs Java</div>
+                </a>
+                <a href="../cSRH_vs_CPP/cSRH_vs_CPP.html">
+                    <div class="block">9. C# vs C++</div>
+                </a>
+                <a href="../comunidade_mercado/comunidade_mercado.html">
+                    <div class="block">10. Comunidade e Mercado de Trabalho</div>
+                </a>
+                <!-- foco prático -->
+                <a href="../conceitos_solid/conceitos_solid.html">
+                    <div class="block">11. Conceitos de SOLID</div>
+                </a>
+                <a href="../superposicao_quantica/superposicao_quantica.html">
+                    <div class="block">12. Superposição quantica</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="primary-header">
+        <div class="wrapper">
+            <div class="primary-header__inner">
+            <span class="logo">
+                <img src="../../assets/c-sharp-c.svg" alt="Logo" class="navbar-logo">
+            </span>
+            <ul class="nav-list">
+                <li><a href="#">Início</a></li>
+                <li><a id="open-modal-topic">Tópicos</a></li>
+                <li><a href="#">Curiosidades</a></li>
+                <li><a id="open-modal-group">Grupo</a></li>
+            </ul>
+            </div>
+        </div>
+        </header>
+    <main>
+        <div class="wrapper">
+            <h2 id="page-title">Conceitos de SOLID</h2>
+            <div class="content-container">
+                <p> OSOLID éumconjunto de cinco princípios fundamentais da POO que tornam o
+                    código mais flexível, compreensível e fácil de manter.</p>
+                <h3>1. Single Responsibility Principle (SRP):</h3>
+                <p>"OSRPdizqueumaclasse deve ter apenas uma razão para mudar, ou seja,
+                    ela deve ter apenas uma responsabilidade."
+                    <br><strong>Antes de aplicar o SRP: </strong></p>
+                    
+<pre><code>public class OrderService {
+    public void ProcessOrder(Order order) {
+        // Process order
+    }
+
+    public void SendEmail(Order order) {
+        // Send email confirmation
+    }
+
+    public void SaveOrder(Order order) {
+        // Save order to the database
+    }
+}
+<p><strong>Depois de aplicar o SRP:</strong></p>
+public class OrderService {
+    public void ProcessOrder(Order order) {
+        // Process order logic
+    }
+}
+
+public class EmailService {
+    public void SendEmail(Order order) {
+        // Send email logic
+    }
+}
+
+public class OrderRepository {
+    public void SaveOrder(Order order) {
+        // Save order to database logic
+    }
+}
+</code></pre>
+            <p>Exemplo em C#: Mostre uma classe que inicialmente tem múltiplas
+                responsabilidades e depois refatore para dividir essas responsabilidades em
+                classes separadas.</p>
+            </div>
+            <h2 id="b_01"></h2>
+            <div class="content-container">
+                <h3>2. Open/Closed Principle (OCP):</h3>
+                <p>"Classes devem estar abertas para extensão, mas fechadas para
+                    modificação. Ou seja, você deve ser capaz de estender o comportamento de
+                    uma classe sem modificar seu código."</p>
+                <p><strong>Antes de aplicar o OCP:</strong></p>
+
+<pre><code>public class PaymentProcessor {
+public void ProcessPayment(string paymentType) {
+    if (paymentType == "CreditCard") {
+        // Process credit card payment
+    } else if (paymentType == "PayPal") {
+        // Process PayPal payment
+    }
+}
+}
+
+<p><strong>Depois de aplicar o OCP:</strong></p>
+
+public interface IPayment {
+    void ProcessPayment();
+}
+
+public class CreditCardPayment : IPayment {
+    public void ProcessPayment() {
+        // Process credit card payment
+    }
+}
+
+public class PayPalPayment : IPayment {
+    public void ProcessPayment() {
+        // Process PayPal payment
+    }
+}
+
+public class PaymentProcessor {
+    public void ProcessPayment(IPayment payment) {
+        payment.ProcessPayment();
+    }
+}
+</code></pre>
+</div>
+            <h2 id="b_02"></h2>
+            <div class="content-container">
+                <h3>3. Liskov Substitution Principle (LSP):</h3>
+                <p>"Subclasses devem poder substituir suas classes base sem alterar a
+                    funcionalidade do programa."</p>
+                <p><strong>Violando o LSP:</strong></p>
+                <p><strong>Violando o LSP:</strong></p>
+
+<pre><code>public class Bird
+{
+    public virtual void Fly()
+    {
+        //Fly logic
+    }
+}
+
+public class Ostrich : Bird
+{
+    public override void Fly()
+    {
+        throw new Exception("Ostriches can't fly!");
+    }
+}
+</code></pre>
+
+<p><strong>Após aplicar o LSP (redefinindo a hierarquia):</strong></p>
+
+<pre><code>public abstract class Bird
+{
+    public abstract void Move();
+}
+
+public class FlyingBird : Bird
+{
+    public override void Move()
+    {
+        //Fly logic
+    }
+}
+
+public class Ostrich : Bird
+{
+    public override void Move()
+    {
+        //Run logic (Ostriches run, not fly)
+    }
+}
+</code></pre>
+            </div>
+            <h2 id="b_03"></h2>
+            <div class="content-container">
+                <h3>4. Interface Segregation Principle (ISP):</h3>
+                <p>"Osclientes não devem ser forçados a depender de interfaces que não
+                    usam."</p>
+                <p><strong>Violando o ISP: (interface muito grande)</strong></p>
+                    <strong>Antes de aplicar o ISP:</strong>
+
+<pre><code>public interface IWorker
+{
+    void Work();
+    void Eat();
+}
+
+public class HumanWorker : IWorker
+{
+    public void Work()
+    {
+        //Working logic
+    }
+
+    public void Eat()
+    {
+        //Eating logic
+    }
+}
+
+public class RobotWorker : IWorker
+{
+    public void Work()
+    {
+        //Working logic
+    }
+
+    public void Eat()
+    {
+        throw new Exception("Robots don't eat!");
+    }
+}
+</code></pre>
+
+<strong>Após aplicar o ISP:</strong>
+
+<pre><code>public interface IWork
+{
+    void Work();
+}
+
+public interface IEat
+{
+    void Eat();
+}
+
+public class HumanWorker : IWork, IEat
+{
+    public void Work()
+    {
+        //Working logic
+    }
+
+    public void Eat()
+    {
+        //Eating logic
+    }
+}
+
+public class RobotWorker : IWork
+{
+    public void Work()
+    {
+        //Working logic
+    }
+}
+</code></pre>
+            </div>
+            <h2 id="b_04"></h2>
+            <div class="content-container">
+                <h3>5. Dependency Inversion Principle (DIP):</h3>
+                <p>"Módulos de alto nível não devem depender de módulos de baixo nível;
+                ambos devem depender de abstrações."</p>
+                <p><strong>Antes de aplicar o DIP: </strong></p>
+
+<pre><code>public class LightBulb
+{
+    public void TurnOn()
+    {
+        //Turn on logic
+    }
+
+    public void TurnOff()
+    {
+        //Turn off logic
+    }
+}
+
+public class Switch
+{
+    private LightBulb _lightBulb = new LightBulb();
+
+
+    public void Operate()
+    {
+        _lightBulb.TurnOn();
+    }
+}
+
+</code></pre>
+
+<strong>Após aplicar o DIP (utilizando abstrações):</strong>
+
+
+<pre><code>public interface ISwitchable
+{
+    void TurnOn();
+    void TurnOff();
+}
+
+public class LightBulb : ISwitchable
+{
+    public void TurnOn()
+    {
+        //Turn on logic
+    }
+
+    public void TurnOff()
+    {
+        //Turn off logic
+    }
+}
+
+public class Switch
+{
+    private ISwitchable _device;
+
+    public Switch(ISwitchable device)
+    {
+        _device = device;
+    }
+
+    public void Operate()
+    {
+        _device.TurnOn();
+    }
+}</code></pre>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </main>
+        <!-- Modal de Tópicos -->
+        <div id="modal-topic" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal-topic">&times;</span>
+                <h2>Tópicos</h2>
+                <p class="bloco-modal" data-section="page-title">Conceitos de SOLID</p>
+                <p class="bloco-modal" data-section="b_01">2. Open/Closed Principle (OCP)</p>
+                <p class="bloco-modal" data-section="b_02">3. Liskov Substitution Principle (LSP)</p>
+                <p class="bloco-modal" data-section="b_03">4. Interface Segregation Principle (ISP)</p>
+                <p class="bloco-modal" data-section="b_04">5. Dependency Inversion Principle (DIP)</p>
+            </div>
+        </div>
+
+    <!-- Modal de Grupo -->
+    <div id="modal-group" class="modal" id="open-pages-nav">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal-group">&times;</span> 
+            <h2>Nosso Grupo</h2>
+            <p>Este é o conteúdo do modal.</p>
+        </div>
+    </div>
+    <!-- Botao flutuante -->
+    <div class="floating-button" id="open-pages-nav-btn">
+        <span class="icon-sandwich">&#9776;</span>
+    </div>
+
+    <!-- Modal de Navegação de Páginas -->
+    <div id="pages-nav" class="pages-nav-modal">
+        <div class="pages-nav-modal-content">
+            <span class="close-btn" id="close-pages-nav">&times;</span>
+            <h2>Ver um tema</h2>
+            <div class="blocks-container">
+                <a href="../historia_poo/historia_poo.html">
+                    <div class="block">1. História POO</div>
+                </a>
+                <!-- vantages e desvantagens -->
+                <a href="../conceitos_poo/conceitos_poo.html">
+                    <div class="block">2. Conceitos de POO</div>
+                </a>
+                <a href="../dominios_aplicacoes/dominios_aplicacoes.html">
+                    <div class="block">3. Domínio de aplicações</div>
+                </a>
+                <a href="../contribuicao_influencia/contribuicao_influencia.html">
+                    <div class="block">4. Contribuição e influencia para a computação</div>
+                </a>
+                <!-- analise da linguagem -->
+                <a href="../historia_cSRH/historia_cSRH.html">
+                    <div class="block">5. História C#</div>
+                </a>
+                <a href="../linha_do_tempo/linha_do_tempo.html">
+                    <div class="block">6. Linha do tempo POO</div>
+                </a>
+                <a href="../cSRH_vs_python/cSRH_vs_python.html">
+                    <div class="block">7. C# vs Python</div>
+                </a>
+                <a href="../cSRH_vs_java/cSRH_vs_java.html">
+                    <div class="block">8. C# vs Java</div>
+                </a>
+                <a href="../cSRH_vs_CPP/cSRH_vs_CPP.html">
+                    <div class="block">9. C# vs C++</div>
+                </a>
+                <a href="../comunidade_mercado/comunidade_mercado.html">
+                    <div class="block">10. Comunidade e Mercado de Trabalho</div>
+                </a>
+                <!-- foco prático -->
+                <a href="../conceitos_solid/conceitos_solid.html">
+                    <div class="block">11. Conceitos de SOLID</div>
+                </a>
+                <a href="../superposicao_quantica/superposicao_quantica.html">
+                    <div class="block">12. Superposição quantica</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/script.js"></script>
+</body>
+</html>

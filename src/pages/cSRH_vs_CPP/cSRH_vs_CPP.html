@@ -24,62 +24,52 @@
         </header>
     <main>
         <div class="wrapper">
-            <h2 id="page-title">C# vs Python: Flexibilidade e Implementação.</h2> <br>
-            <!-- <h2 id="b_01"></h2> -->
+            <h2 id="page-title">C# vs C++: Herança múltipla e gerenciamento de memória</h2>
             <div class="content-container">
-                <p>Quando se compara C# e Python em termos de flexibilidade e implementação, 
-                    cada linguagem apresenta vantagens distintas, dependendo do tipo de projeto e dos 
-                    requisitos.</p>
+                <p>C# e C++ são linguagens poderosas, mas com abordagens bem diferentes em 
+                    relação à herança múltipla e gerenciamento de memória. </p>
             </div>
-            <h2 id="b_02">Flexibilidade</h2>
+            <h2 id="b_01">Herança Múltipla</h2>
             <div class="content-container">
-                <p>Python é amplamente conhecido por sua flexibilidade. Ele é dinamicamente 
-                    tipado, o que significa que os tipos de variáveis são definidos durante a execução, 
-                    permitindo mudanças rápidas no código e uma curva de aprendizado mais suave. 
-                    Python se destaca em prototipagem rápida e desenvolvimento de scripts ou projetos de 
-                    machine learning, graças à sua vasta gama de bibliotecas e frameworks (como Django, 
-                    Flask e TensorFlow).</p>
-                <p>Por outro lado, C# é uma linguagem estaticamente tipada, exigindo que os tipos 
-                    de variáveis sejam definidos antes da execução, o que proporciona maior segurança e 
-                    robustez do código, especialmente em projetos maiores. Embora isso torne o 
-                    desenvolvimento inicial mais lento em comparação com Python, a tipagem estática 
-                    ajuda a evitar muitos erros que poderiam ocorrer durante a execução. C# também é 
-                    altamente estruturado, o que o torna ideal para projetos maiores e mais complexos, 
-                    como o desenvolvimento de jogos (com Unity) e aplicativos empresariais, 
-                    especialmente com o suporte da plataforma .NET.</p>
+                <p>No C#, a herança múltipla direta de classes não é suportada. Em vez disso, o C# 
+                    permite a herança de uma única classe base e a implementação de múltiplas interfaces. 
+                    Isso simplifica o modelo de herança, evitando as complexidades e ambiguidades que 
+                    podem surgir na herança múltipla, como o "problema do diamante". Esse design torna o 
+                    código mais limpo e fácil de manter. </p>
                 <div class="reference-content">
-                    <p>Referência: <a target="_blank" href="https://www.scaler.com/topics/csharp-vs- pyth on/">
-                        https://www.scaler.com/topics/csharp-vs- pyth on/</a></p>
+                    <p>Referência: <a target="_blank" href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance">https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance</a></p>
                 </div>
+                <p>
+                    Já o C++ suporta herança múltipla, permitindo que uma classe herde de várias 
+                    classes base. Isso oferece maior flexibilidade na modelagem de classes, mas também 
+                    pode introduzir problemas de ambiguidade, como o "problema do diamante", que 
+                    ocorre quando uma classe herda de duas classes que, por sua vez, herdam de uma 
+                    mesma classe base. No entanto, o C++ oferece soluções como a palavra-chave 
+                    virtual para resolver esses problemas. 
+                </p>
                 <div class="reference-content">
-                    <p><a target="_blank" href="https://softwarelogic.co/blog/python-vs-c-benefits-differences-use-cases/">
-                        https://softwarelogic.co/blog/python-vs-c-benefits-differences-use-cases/</a></p>
+                    <p>Referência: <a target="_blank" href="https://www.freecodecamp.org/portuguese/news/heranca-multipla-em-c-mais-mais-e-o-problema-do-diamante/">https://www.freecodecamp.org/portuguese/news/heranca-multipla-em-c-mais-mais-e-o-problema-do-diamante/</a></p>
                 </div>
             </div>
-            <h2 id="b_03">Implementação e Performance</h2>
+            <h2 id="b_02">Gerenciamento de Memória</h2>
             <div class="content-container">
-                <p>Python é uma linguagem interpretada, o que significa que o código é executado 
-                    linha por linha, facilitando testes rápidos e desenvolvimento iterativo. No entanto, essa 
-                    abordagem também implica em uma execução mais lenta em comparação a linguagens 
-                    compiladas como C#.</p>
-                <p>C# é uma linguagem compilada, o que proporciona maior eficiência em termos 
-                    de uso de memória e tempo de execução, já que o código é traduzido diretamente para 
-                    linguagem de máquina antes de ser executado. Isso torna C# uma escolha superior para 
-                    aplicativos que exigem alta performance, como grandes sistemas corporativos e jogos 
-                    de alta complexidade.</p>
+                <p>O gerenciamento de memória no C# é feito automaticamente por meio do 
+                    Garbage Collector (GC). O GC libera memória ocupada por objetos que não estão mais 
+                    sendo utilizados pelo programa, eliminando a necessidade de gerenciamento manual 
+                    da memória. Isso reduz a ocorrência de erros como vazamentos de memória e dangling 
+                    pointers, mas pode resultar em pequenas pausas no desempenho quando o GC é 
+                    executado.</p>
                 <div class="reference-content">
-                    <p>Referência: <a target="_blank" href="https://www.halfnine.com/blog/post/c-sharp-vs- python">
-                        https://www.halfnine.com/blog/post/c-sharp-vs- python</a></p>
+                    <p>Referência: <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/">https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/</a></p>
                 </div>
-            </div>
-            <h2 id="b_04">Conclusão</h2>
-            <div class="content-container">
-                <p>Se o objetivo for um desenvolvimento rápido e iterativo, especialmente em áreas 
-                    como web, ciência de dados e IA, Python oferece uma solução flexível e eficaz. No 
-                    entanto, se o foco for em performance, escalabilidade e robustez, especialmente em 
-                    ambientes empresariais ou de desenvolvimento de jogos, C# é uma escolha mais 
-                    adequada. A escolha entre Python e C# deve considerar o tipo de projeto e as 
-                    necessidades de desempenho e manutenção a longo prazo.</p>
+                <p>No C++, o gerenciamento de memória é manual. O programador é responsável 
+                    por alocar e desalocar memória utilizando as funções new e delete. Embora isso 
+                    ofereça maior controle sobre o uso de memória e otimizações de desempenho, também 
+                    aumenta a responsabilidade e os riscos de erros como vazamentos de memória e 
+                    corrupção de memória, caso a alocação e desalocação não sejam feitas corretamente.</p>
+                <div class="reference-content">
+                    <p>Referência: <a target="_blank" href="https://en.cppreference.com/w/cpp/memory">https://en.cppreference.com/w/cpp/memory</a></p>
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -91,10 +81,9 @@
             <div class="modal-content">
                 <span class="close-btn" id="close-modal-topic">&times;</span>
                 <h2>Tópicos</h2>
-                <p class="bloco-modal" data-section="page-title">C# vs Python</p>
-                <p class="bloco-modal" data-section="b_02">Flexibilidade</p>
-                <p class="bloco-modal" data-section="b_03">Implementação e Performance</p>
-                <p class="bloco-modal" data-section="b_04">Conclusão</p>
+                <p class="bloco-modal" data-section="page-title">C# vs C++</p>
+                <p class="bloco-modal" data-section="b_01">Herança Múltipla</p>
+                <p class="bloco-modal" data-section="b_02">Gerenciamento de Memória</p>
             </div>
         </div>
 

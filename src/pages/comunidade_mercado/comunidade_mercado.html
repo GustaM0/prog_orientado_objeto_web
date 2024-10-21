@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="primary-header">
+        <div class="wrapper">
+            <div class="primary-header__inner">
+            <span class="logo">
+                <img src="../../assets/c-sharp-c.svg" alt="Logo" class="navbar-logo">
+            </span>
+            <ul class="nav-list">
+                <li><a href="#">Início</a></li>
+                <li><a id="open-modal-topic">Tópicos</a></li>
+                <li><a href="#">Curiosidades</a></li>
+                <li><a id="open-modal-group">Grupo</a></li>
+            </ul>
+            </div>
+        </div>
+        </header>
+    <main>
+        <div class="wrapper">
+            <h2 id="page-title">Comunidade e Mercado de Trabalho</h2>
+            <div class="content-container">
+                <p>O mercado de trabalho para C# é bastante dinâmico e oferece diversas oportunidades.
+                    Aqui estão alguns aspectos importantes:</p>
+                <h3>1. Demanda alta:</h3>
+                <p>C# é amplamente utilizado em empresas que desenvolvem
+                    aplicações empresariais, jogos (com Unity) e aplicações web. A demanda por
+                    desenvolvedores C# é constante, especialmente em setores como tecnologia,
+                    finanças e saúde.</p>
+                <h3>2. Versatilidade</h3>
+                <p>A linguagem é utilizada em diversas áreas, como
+                    desenvolvimento de aplicativos desktop, web (ASP.NET), desenvolvimento de
+                    jogos e até aplicações móveis (Xamarin). Isso proporciona uma gama ampla de
+                    oportunidades.</p>
+                <h3>3. Salários Competitivos:</h3>
+                <p>Profissionais com habilidades em C# geralmente
+                    recebem salários competitivos. Os valores podem variar dependendo da
+                    localização, experiência e da empresa, mas, em geral, os desenvolvedores C#
+                    são bem remunerados.</p>
+                <h3>4. Empresas e Setores: </h3>
+                <p>Muitas empresas renomadas, incluindo Microsoft,
+                    Amazon, e diversas startups, buscam desenvolvedores C#. O setor de jogos
+                    também oferece muitas oportunidades, dado o uso do Unity, que utiliza C#.</p>
+                <h3>5. Crescimento e Inovação: </h3>
+                <p>Com a evolução constante do .NET e a introdução de
+                    novas funcionalidades na linguagem, o mercado de C# continua a crescer.
+                    Profissionais que investem em aprendizado contínuo e se mantêm atualizados
+                    com as tendências do setor têm boas perspectivas de carreira.</p>
+                <p>Em resumo, o mercado de trabalho para C# é robusto e oferece muitas oportunidades
+                    para desenvolvedores de todos os níveis.</p>
+            </div>
+            <h2 id="b_01">Sobre a comunidade</h2>
+            <div class="content-container">
+                <p>A comunidade de C# é bastante ativa e diversificada, composta por desenvolvedores,
+                    entusiastas e profissionais de tecnologia. Aqui estão alguns aspectos importantes
+                    sobre como essa comunidade funciona:</p>
+
+                <h3>1. Fóruns e Grupos de Discussão</h3>
+                <p>Existem muitos fóruns online, como Stack
+                Overflow e Reddit, onde os desenvolvedores podem fazer perguntas, compartilhar
+                conhecimento e discutir problemas relacionados a C#. Além disso, grupos no
+                Facebook e LinkedIn são populares para networking e troca de experiências.</p>
+
+                <h3>2. Eventos e Conferências</h3>
+                <p>A comunidade realiza diversos eventos, como
+                meetups, workshops e conferências, onde desenvolvedores podem aprender sobre
+                novas tecnologias, compartilhar experiências e fazer networking. Exemplos incluem a
+                Microsoft Build e o .NET Conf.</p>
+
+                <h3>3. Open Source</h3>
+                <p>C# e muitas das suas bibliotecas estão disponíveis como projetos
+                open source no GitHub. A comunidade pode contribuir com melhorias, correções e
+                novas funcionalidades.</p>
+
+                <h3>4. Documentação e Tutoriais</h3>
+                <p>A Microsoft fornece uma documentação
+                abrangente, além de muitos tutoriais e cursos online que ajudam novos
+                desenvolvedores a aprender C# e aprimorar suas habilidades.</p>
+
+                <h3>5. Comunidades Locais</h3>
+                <p>Em muitas cidades, existem grupos de usuários de C# e
+                .NET que se reúnem regularmente para discutir tópicos relevantes, compartilhar
+                projetos e promover o aprendizado colaborativo.</p>
+
+                <h3>6. Blogs e Canais de Vídeo</h3>
+                <p>Muitos desenvolvedores e especialistas em C#
+                mantêm blogs ou canais no YouTube onde compartilham dicas, tutoriais e análises
+                sobre a linguagem e suas aplicações. A colaboração e o suporte mútuo são
+                fundamentais para o crescimento e a evolução da comunidade de C#</p>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </main>
+        <!-- Modal de Tópicos -->
+        <div id="modal-topic" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal-topic">&times;</span>
+                <h2>Tópicos</h2>
+                <p class="bloco-modal" data-section="sts_historia">História do C#</p>
+                <p class="bloco-modal" data-section="sts_contexto">Contexto e Motivação</p>
+                <p class="bloco-modal" data-section="sts_lancamento">Lançamento e Primeira Versão</p>
+                <p class="bloco-modal" data-section="sts_evolucao">Evolução e Novas Funcionalidades</p>
+                <p class="bloco-modal" data-section="sts_plataforma">C# e a Plataforma .NET</p>
+                <p class="bloco-modal" data-section="sts_hoje">C# Hoje</p>
+            </div>
+        </div>
+
+    <!-- Modal de Grupo -->
+    <div id="modal-group" class="modal" id="open-pages-nav">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal-group">&times;</span> 
+            <h2>Nosso Grupo</h2>
+            <p>Este é o conteúdo do modal.</p>
+        </div>
+    </div>
+    <!-- Botao flutuante -->
+    <div class="floating-button" id="open-pages-nav-btn">
+        <span class="icon-sandwich">&#9776;</span>
+    </div>
+
+    <!-- Modal de Navegação de Páginas -->
+    <div id="pages-nav" class="pages-nav-modal">
+        <div class="pages-nav-modal-content">
+            <span class="close-btn" id="close-pages-nav">&times;</span>
+            <h2>Ver um tema</h2>
+            <div class="blocks-container">
+                <a href="../historia_poo/historia_poo.html">
+                    <div class="block">1. História POO</div>
+                </a>
+                <!-- vantages e desvantagens -->
+                <a href="../conceitos_poo/conceitos_poo.html">
+                    <div class="block">2. Conceitos de POO</div>
+                </a>
+                <a href="../dominios_aplicacoes/dominios_aplicacoes.html">
+                    <div class="block">3. Domínio de aplicações</div>
+                </a>
+                <a href="../contribuicao_influencia/contribuicao_influencia.html">
+                    <div class="block">4. Contribuição e influencia para a computação</div>
+                </a>
+                <!-- analise da linguagem -->
+                <a href="../historia_cSRH/historia_cSRH.html">
+                    <div class="block">5. História C#</div>
+                </a>
+                <a href="../linha_do_tempo/linha_do_tempo.html">
+                    <div class="block">6. Linha do tempo POO</div>
+                </a>
+                <a href="../cSRH_vs_python/cSRH_vs_python.html">
+                    <div class="block">7. C# vs Python</div>
+                </a>
+                <a href="../cSRH_vs_java/cSRH_vs_java.html">
+                    <div class="block">8. C# vs Java</div>
+                </a>
+                <a href="../cSRH_vs_CPP/cSRH_vs_CPP.html">
+                    <div class="block">9. C# vs C++</div>
+                </a>
+                <a href="../comunidade_mercado/comunidade_mercado.html">
+                    <div class="block">10. Comunidade e Mercado de Trabalho</div>
+                </a>
+                <!-- foco prático -->
+                <a href="../conceitos_solid/conceitos_solid.html">
+                    <div class="block">11. Conceitos de SOLID</div>
+                </a>
+                <a href="../superposicao_quantica/superposicao_quantica.html">
+                    <div class="block">12. Superposição quantica</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/script.js"></script>
+</body>
+</html>
