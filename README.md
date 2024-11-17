@@ -72,7 +72,7 @@ Prefere explorar o código diretamente? No nosso repositório no GitHub você po
 
 O desenvolvimento deste projeto contou com a dedicação de um time formado por sete integrantes, responsáveis por diferentes aspectos da implementação e apresentação. Abaixo, listamos os membros:
 
-- **Guilherme Araújo**  
+- **Guilherme Araújo**
 - **Gustavo Martins** 
 - **João Victor Moulin**  
 - **João Victor Martins** 
