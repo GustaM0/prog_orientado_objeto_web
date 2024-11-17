@@ -72,13 +72,13 @@ Prefere explorar o código diretamente? No nosso repositório no GitHub você po
 
 O desenvolvimento deste projeto contou com a dedicação de um time formado por sete integrantes, responsáveis por diferentes aspectos da implementação e apresentação. Abaixo, listamos os membros:
 
-- **Guilherme Araújo**
-- **Gustavo Martins** 
-- **João Victor Moulin**  
-- **João Victor Martins** 
-- **Matheus Máximo**  
-- **Polyana Cunha**  
-- **Rodrigo Machado**  
+- **Guilherme Araújo - 30311705**
+- **Gustavo Martins - 29527741** 
+- **João Victor Moulin - 29350301**  
+- **João Victor Martins - 30946948** 
+- **Matheus Máximo - 29912997**  
+- **Polyana Cunha - 30225701**  
+- **Rodrigo Machado - 30256593**  
 
 ---
 
